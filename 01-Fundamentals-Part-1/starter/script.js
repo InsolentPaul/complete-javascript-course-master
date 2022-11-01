@@ -129,6 +129,153 @@ if (userLogin == "admin") {
   alert("CANCELED!");
 } else {
   alert("ERROR!");
-} */
+} 
 
-console.log("check one two");
+console.log("check one two"); */
+
+// 1.17 Strings and Template literals
+console.log(`--- Strings and Template literals ---`);
+const firstName = "John";
+const job = "engineer";
+const birthYear = 1989;
+const year = 2022;
+
+const person = `I'm ${firstName}, a ${year - birthYear} year old ${job}`;
+console.log(person);
+
+console.log(`test backticks`);
+
+console.log("String with \n\
+new line \n\
+of lines");
+
+console.log(`String
+new line
+easier`);
+
+// 1.18. Taking Decisions: if / else Statements
+console.log(`--- Taking Decisions: if / else Statements ---`);
+const age = 15;
+
+if (age >= 18) {
+  console.log(`Pete can start driving licence 🤪`);
+} else {
+  const yearsLeft = 18 - age;
+  console.log(`Pete is too young. Wait for ${yearsLeft} years.`);
+}
+
+const yearBirth = 1989;
+let century;
+if (yearBirth <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+
+console.log(century);
+
+// 1.19. Coding Challenge #2
+console.log(`--- Coding Challenge #2 ---`);
+
+const massMark = 78; // kilos
+const heightMark = 1.69; // meters
+const massJohn = 92; // kilos
+const heightJohn = 1.95; // meters
+
+const markBMI = massMark / heightMark ** 2;
+const johnBMI = massJohn / heightJohn ** 2;
+
+console.log(
+  `Mark's BMI ${markBMI.toFixed(2)} vs John's BMI ${johnBMI.toFixed(2)}`
+);
+
+if (markBMI > johnBMI) {
+  console.log(
+    `Mark's BMI ${markBMI.toFixed(2)} is higher than John's! ${johnBMI.toFixed(
+      2
+    )}`
+  );
+} else {
+  console.log(
+    `John's BMI ${johnBMI.toFixed(2)} is higher than Mark's ${markBMI.toFixed(
+      2
+    )}!`
+  );
+}
+
+// 1.20 Type Conversion and Coercion
+console.log(`--- Type Conversion and Coercion ---`);
+
+// type conversion
+const inputYear = "1989";
+console.log(Number(inputYear)); // convert to number
+console.log(inputYear + 18); // returns string
+console.log(Number(inputYear) + 18);
+
+console.log(Number("Pete")); // NaN
+console.log(typeof NaN); // number
+
+console.log(String(23)); // string "23"
+
+// type coersion
+console.log("I am " + 23 + " years old."); // "+" triggers coersion to string for number 23
+console.log("23" - "10" - 3); // "-" triggers convertion to number for strings "23" and "10"
+console.log("23" * "2"); // "*" and "/" converts everything to number, * / is pousible only for numbers
+
+let n = "1" + 1; // "11"
+n = n - 1; // 11 - 1
+console.log(n); // 10
+
+//1.21 Truthy and Falsy Values
+console.log("--- Truthy and Falsy Values ---");
+
+// 5 falsy values: 0, "", undefined, null, NaN
+console.log(Boolean(0)); // false
+console.log(Boolean(undefined)); // false
+console.log(Boolean("Pete")); // true
+console.log(Boolean("")); // false
+
+const money = 0;
+if (money) {
+  console.log("Don't spend it all.");
+} else {
+  console.log("You should get a job!");
+}
+
+let height;
+if (height) {
+  console.log(`Hight is defined`);
+} else {
+  console.log(`Height is undefined`);
+}
+
+// 1.22 Equality Operators: == vs. ===
+console.log("--- Equality Operators: == vs. === ---");
+const ageEqual = "18";
+if (ageEqual === 18) console.log("Strict");
+if (ageEqual == 18) console.log("Not strict");
+
+// 1.23 Boolean Logic
+console.log("--- Boolean Logic ---");
+// 1.24 Logical Operators
+console.log("--- Logical Operators ---");
+
+const hasDriverLience = true; // A
+const hasGoodVision = true; // B
+
+console.log(hasDriverLience && hasGoodVision); // &&
+console.log(hasDriverLience || hasGoodVision); // ||
+console.log(hasDriverLience && !hasGoodVision); // !
+
+// if (hasDriverLience && hasGoodVision) {
+//   console.log(`Sarah is able to drive`);
+// } else {
+//   console.log(`Someone else should drive`);
+// }
+
+const isTired = false; // C
+if (hasDriverLience && hasGoodVision && !isTired) {
+  console.log(`Sarah is able to drive`);
+} else {
+  console.log(`Someone else should drive`);
+}
