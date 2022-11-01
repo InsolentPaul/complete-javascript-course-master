@@ -302,3 +302,59 @@ if (dolphins > koalas && dolphins > 100) {
 
 // 1.26 The switch Statement
 console.log("--- The switch Statement ---");
+
+const day = "monday";
+
+switch (day) {
+  case "monday": // day === "monday"
+    console.log("Plan course structure");
+    console.log("Go to coding meetup");
+    break; // no break - code will be executed fwd
+  case "tuesday":
+    console.log("Prepare videos");
+    break;
+  case "wednesday":
+  case "thursday":
+    console.log("Write code examples");
+    break;
+  case "friday":
+    console.log("Record videos");
+    break;
+  case "saturday":
+  case "sunday":
+    console.log("Enjoy the weekend");
+    break;
+  default:
+    console.log("Not a valid day");
+}
+
+// 1.27. Statements and Expressions
+console.log("--- Statements and Expressions ---");
+
+// 3+4 is expression because it produce the value
+// 1989 is expression
+// if(...) {...} else {...} is statement because it not produce any value
+
+// 1.28 The Conditional (Ternary) Operator
+console.log("--- The Conditional (Ternary) Operator ---");
+
+const cond = 25;
+cond >= 18 ? console.log("Let's drink") : console.log("You are too young"); // conditional operator is short statement, ternary because it has 3 parts
+
+// Operator always produce value so it is expression
+const drink = cond >= 18 ? "Let's drink" : "You are too young";
+console.log(drink);
+
+let drink2;
+if (cond >= 18) {
+  drink2 = "Let's drink";
+} else {
+  drink2 = "You are too young";
+}
+
+console.log(drink2);
+
+console.log(`Can I drink with you? 
+${drink}`);
+
+// 1.29
