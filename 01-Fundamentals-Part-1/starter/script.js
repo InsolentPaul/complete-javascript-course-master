@@ -279,3 +279,26 @@ if (hasDriverLience && hasGoodVision && !isTired) {
 } else {
   console.log(`Someone else should drive`);
 }
+
+// 1.25 Coding Challenge #3
+console.log("--- Coding Challenge #3 ---");
+// Making avaerage
+function avaerageScore(score1, score2, score3) {
+  return (score1 + score2 + score3) / 3;
+}
+// Making teams
+const dolphins = avaerageScore(97, 112, 101);
+const koalas = avaerageScore(109, 95, 106);
+// Compare scores
+if (dolphins > koalas && dolphins > 100) {
+  console.log(`Dolphis is a winner with ${dolphins.toFixed(2)} scores`);
+} else if (dolphins === koalas && dolphins >= 100) {
+  console.log(`It's a DRAW with ${dolphins.toFixed(2)} scores!`);
+} else if (dolphins < koalas && koalas > 100) {
+  console.log(`Koalas is a winner with ${koalas.toFixed(2)} scores`);
+} else {
+  console.log("Data error :(");
+}
+
+// 1.26 The switch Statement
+console.log("--- The switch Statement ---");
