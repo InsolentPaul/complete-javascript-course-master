@@ -357,4 +357,25 @@ console.log(drink2);
 console.log(`Can I drink with you? 
 ${drink}`);
 
-// 1.29
+// 1.29 Coding Challenge #4
+console.log("--- Coding Challenge #4 ---");
+
+const bill = 275;
+const checkValue = bill >= 50 && bill <= 300;
+let tips;
+
+switch (checkValue) {
+  case true:
+    tips = 15;
+    break;
+  default:
+    tips = 20;
+    break;
+}
+
+let totalTips = (bill / 100) * tips;
+let totalBill = bill + totalTips;
+
+console.log(
+  `The bill was ${bill}, the tip was ${totalTips}, and the total value is ${totalBill}.`
+);
