@@ -121,3 +121,31 @@ const yearsUntilRetirementReview = function (birthYearArrow, firstName) {
 
 console.log(yearsUntilRetirementReview(1987, "Peter"));
 console.log(yearsUntilRetirementReview(1950, "Mike"));
+
+// 2.38 Coding Challenge #1
+console.log(`--- Coding Challenge #1 ---`);
+
+// Calculate average function
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+// Use function
+// Data 1
+const dolphinsData1 = calcAverage(44, 23, 71);
+const koalasData1 = calcAverage(65, 54, 49);
+// Data 2
+const dolphinsData2 = calcAverage(85, 54, 41);
+const koalasData2 = calcAverage(23, 34, 27);
+// Check winner
+function checkWinner(player1, player2) {
+  if (player1 >= player2 * 2) {
+    console.log(`Dolphins win ${player1} vs. ${player2}`);
+  } else if (player2 >= player1 * 2) {
+    console.log(`Koalas win ${player2} vs. ${player1}`);
+  } else {
+    console.log(`Score does not double`);
+  }
+}
+// Log results
+// Data 1
+checkWinner(dolphinsData1, koalasData1);
+// Data 2
+checkWinner(dolphinsData2, koalasData2);
